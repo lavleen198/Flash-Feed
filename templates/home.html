@@ -1,0 +1,15 @@
+{%extends "layout.html" %}
+{% block content%}
+    {% for news in ns %}
+ <article class="media content-section">
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="#">Headlines</a>
+      <small class="text-muted">{{news.author}}</small>
+    </div>
+    <h2><a class="article-title" href="#">{{ news.title }}</a></h2>
+    <p class="article-content"><a href={{news.url}}>Visit Source</a></p>
+  </div>
+</article>
+    {%endfor%}
+{% endblock %}
